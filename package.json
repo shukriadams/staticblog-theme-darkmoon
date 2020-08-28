@@ -1,0 +1,9 @@
+{
+    "name": "staticblog-theme-darkmoon",
+    "version": "0.0.1",
+    "description": "A theme for staticblog",
+    "private": false,
+    "license": "MIT",
+    "author": "shukri.adams@gmail.com",
+    "dependencies": { }
+}
