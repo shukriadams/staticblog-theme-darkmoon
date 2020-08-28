@@ -1,0 +1,55 @@
+{{#extend "layout"}}
+
+    {{#content "body"}}
+
+        <article class="post">
+
+            {{#if post.hero}}
+                <img class="post-hero" src="{{post.hero}}" /> 
+            {{/if}}
+
+            <h1>{{post.title}}</h1>
+            
+            {{#if post.date}}
+                <div class="post-date">   
+                    {{shortDate post.date}} ({{ago post.date}})
+                    {{#if post.isUpdated}}
+                        <div>
+                            Updated {{shortDate post.updated}} ({{ago post.updated}})
+                        </div>
+                    {{/if}}
+                </div>
+            {{/if}}
+
+            {{#if post.tags.length}}
+                <div class="post-tags">
+                    Tags : {{{renderTags post.tags}}}
+                </div>
+            {{/if}}
+
+            {{{post.markup}}}
+
+        </article>
+
+        <div class="pager">
+            <div class="pager-previous">
+                {{#if previousPost}}
+                    Previous :
+                    <a href="{{previousPost.url}}">{{previousPost.title}}</a>
+                {{/if}}
+            </div>
+            <div class="pager-next">
+                {{#if nextPost}}
+                    Next : 
+                    <a href="{{nextPost.url}}">{{nextPost.title}}</a>
+                {{/if}}
+            </div>
+        </div>        
+        
+    {{/content}}
+
+    {{#content "footer"}}
+        {{>footer}}
+    {{/content}}
+
+{{/extend}}

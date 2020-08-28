@@ -1,0 +1,62 @@
+{{#extend "layout"}}
+
+    {{#content "body"}}
+
+        <div class="index">
+            {{#each posts}}
+                <div class="index-item">
+                    <a class="index-itemLink" href="{{url}}">
+                        <div class="index-itemLinkContent">
+                            <h2 class="index-itemHeader">{{title}}</h2>
+                            
+                            {{#if description}}
+                                <p>{{description}}</p>
+                            {{/if}}
+
+                            {{#if isUpdated}}
+                                <div class="index-itemDate">
+                                    {{shortDate updated}} ({{ago updated}})
+                                </div>
+                            {{else if date}}
+                                <div class="index-itemDate">
+                                    {{shortDate date}} ({{ago date}})
+                                </div>
+                            {{/if}}
+
+                            {{#if tags.length}}
+                                <div class="index-itemTags">
+                                    Topics : {{{arrayJoin tags}}}
+                                </div>
+                            {{/if}}
+
+                        </div>
+                        {{#if hero}}
+                            <img class="index-itemHero" src="{{hero}}" />
+                        {{/if}} 
+                    </a>
+                </div>
+            {{/each}}
+        </div>
+
+        <div class="pager">
+            <div class="pager-previous">
+                {{#isDefined prev}}
+                    <a href="/index{{#neq prev 0}}-{{prev}}{{/neq}}.html">Older</a>
+                {{/isDefined}}
+            </div>
+            <div class="pager-next">
+                {{#isDefined next}}
+                    <a href="/index{{#neq next 0}}-{{next}}{{/neq}}.html">Newer</a>
+                {{/isDefined}}
+            </div>
+        </div>
+        
+    {{/content}}
+
+    {{#content "footer"}}
+        {{>footer}}
+    {{/content}}    
+
+{{/extend}}
+
+
