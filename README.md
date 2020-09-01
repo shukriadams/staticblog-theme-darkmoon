@@ -12,9 +12,9 @@ Add the following to your package.json
 
 Add to build script
 
-    const blogEngine = require('staticblog')
+    const staticblog = require('staticblog')
     
-    await blogEngine({
+    await staticblog({
         ...
         themeFolder: './node_modules/staticblog-theme-darkmoon',
         ...
