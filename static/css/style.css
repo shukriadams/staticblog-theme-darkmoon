@@ -9,6 +9,7 @@ BASE STYLE
     --color-silver: #bababa;
     --color-mercury: #e9e9e9;
     --color-mineshaft: #212121;
+    --color-mineshaftVariation: #2e2e2e;
     --color-black: #1f1f1f;
     --color-pomegranate: #eb5613;
     --verticalRhythm: 24px;
@@ -87,6 +88,7 @@ Header
     width: 100%;
     height: var(--headerHeight);
     z-index: 1;
+    border-bottom: solid 2px var(--color-mineshaftVariation);
 }
 
 .header a {
@@ -322,7 +324,7 @@ Index
 }
 
 .index-item {
-    background: var(--color-silver);
+    background: var(--color-mineshaftVariation);
     word-wrap: break-word;
     overflow: hidden;
     height: 250px;
@@ -338,7 +340,6 @@ Index
 
 .index-itemHeader {
     color: var(--color-white);
-    font-size: 30px;
     line-height: 30px;
     margin-bottom: var(--verticalRhythm);
 }
@@ -348,7 +349,6 @@ Index
 }
 
 .index-itemLinkContent {
-    background: rgba(0,0,0, .6);
     padding: var(--margin);
     position: absolute;
     top: 0;
@@ -369,6 +369,8 @@ Index
     object-fit: cover;
     width: 100%;
     height: 100%;    
+    opacity: .2;
+    filter: grayscale(100%);
 }
 
 @media all and (max-width: 767px) {
@@ -384,6 +386,8 @@ Layout
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    max-width: 100vw;
+    overflow: hidden;
     position: relative;
 }
 
@@ -459,6 +463,7 @@ Post
 
 .post img {
     max-width: 100%;
+    filter: grayscale(100%);
 }
 
 .post-date {
