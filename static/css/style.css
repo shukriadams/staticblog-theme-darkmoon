@@ -1,7 +1,7 @@
 /*#############################################################################
 BASE STYLE
 #############################################################################*/
-@import url('https://fonts.googleapis.com/css?family=Nunito');
+@import url('https://fonts.googleapis.com/css?family=Nunito:wght@200&family=Inter:wght@700');
 
 :root {
     --color-white: #fcfcfc;
@@ -34,20 +34,38 @@ html {
 body {
     background-color: var(--color-black);
     font-family: 'Nunito', sans-serif;
+    font-weight: 200;
     display: grid;
     margin: 0;
+    line-height: 25px;
+}
+
+h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
 }
 
 h1 {
     font-size: 32px;
 }
 
-h1, h2, h3, p, ul, ol {
-    margin: 0;
-    padding: 0;
+h2 {
+    padding-top: calc(var(--verticalRhythm) * 2);
+}
+
+h3 {
+    font-size: 20px;
+    padding-top: var(--verticalRhythm);
 }
 
 ul, ol {
+    margin: 0;
+    padding: 0;
     padding-left: calc(var(--margin) * 2);
 }
 
@@ -475,15 +493,14 @@ Post
     padding-top: var(--margin);
 }
 
-.post h1, 
-.post h2, 
-.post h3 {
-    padding-top: var(--verticalRhythm);
+.post h1 {
+    padding-top: calc(var(--verticalRhythm) * 2);
 }
 
 /*#############################################################################
 external theme overrides
 #############################################################################*/
 .hljs {
+    background: var(--color-mineshaftVariation) !important;
     padding: 2.5em !important; /* forced to use important here as hljs is self-injected later */
 }
