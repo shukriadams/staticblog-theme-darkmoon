@@ -5,7 +5,9 @@
         <article class="post">
 
             {{#if post.hero}}
-                <img class="post-hero" src="{{post.hero}}" /> 
+                <div class="post-imageclamp">
+                    <img class="post-hero" src="{{post.hero}}" /> 
+                </div>
             {{/if}}
 
             <h1>{{post.title}}</h1>
