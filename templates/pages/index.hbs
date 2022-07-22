@@ -10,6 +10,10 @@
             {{#each posts}}
                 <div class="index-item">
                     <a class="index-itemLink" href="{{url}}">
+                        {{#if hero}}
+                            <img class="index-itemHero" src="{{hero}}" />
+                        {{/if}} 
+                                                
                         <div class="index-itemLinkContent">
                             <h2 class="index-itemHeader">{{title}}</h2>
                             
@@ -34,9 +38,7 @@
                             {{/if}}
 
                         </div>
-                        {{#if hero}}
-                            <img class="index-itemHero" src="{{hero}}" />
-                        {{/if}} 
+
                     </a>
                 </div>
             {{/each}}
