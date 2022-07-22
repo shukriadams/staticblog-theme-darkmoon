@@ -7,6 +7,7 @@ BASE STYLE
     --color-white: #fcfcfc;
     --color-meteor: #C47211;
     --color-silver: #bababa;
+    --color-boulder: #7A7A7A;
     --color-mercury: #e9e9e9;
     --color-mineshaft: #212121;
     --color-mineshaftVariation: #2e2e2e;
@@ -51,7 +52,9 @@ h1, h2, h3 {
 }
 
 h1 {
+    color: var(--color-white);
     font-size: 32px;
+    line-height: 32px;
 }
 
 h2 {
@@ -109,10 +112,6 @@ Header
     border-bottom: solid 2px var(--color-mineshaftVariation);
 }
 
-.header a {
-    color: var(--color-white);
-}
-
 /* give header its fixed size */
 .header-structure{
     height: var(--headerHeight);
@@ -134,7 +133,7 @@ Header
 }
 
 .header-title {
-    font-size: 36px;
+    font-size: 26px;
     transform: translateY(-50%);
     display: inline-block;
     position: absolute;
@@ -337,8 +336,8 @@ Index
 #############################################################################*/
 .index {
     display: grid;
-    grid-gap: 1px;
-    grid-template-columns: 33% 33% 33%;
+    grid-gap: 4px;
+    grid-template-columns: 100%;
 }
 
 .index-item {
@@ -357,9 +356,18 @@ Index
 }
 
 .index-itemHeader {
+    font-size: 50px;
     color: var(--color-white);
-    line-height: 30px;
+    line-height: 50px;
     margin-bottom: var(--verticalRhythm);
+    padding-top: 0;
+}
+
+@media all and (max-width: 767px) {
+    .index-itemHeader {
+        font-size: 40px;
+        line-height: 40px;
+    }    
 }
 
 .index-itemLink:hover {
@@ -485,6 +493,7 @@ Post
 }
 
 .post-date {
+    color: var(--color-boulder);
     padding-top: calc(var(--verticalRhythm) / 2);
     font-size: 12px;
 }
