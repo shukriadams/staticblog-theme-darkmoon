@@ -355,6 +355,7 @@ Index
 .index {
     display: grid;
     grid-gap: 1px;
+    grid-template-columns: 100%;
 }
 
 .index-item {
