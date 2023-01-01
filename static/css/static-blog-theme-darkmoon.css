@@ -82,6 +82,9 @@ a:hover {
     text-decoration: underline;
 }
 
+img {
+    max-width: 100%;
+}
 
 /*#############################################################################
 Archive
@@ -491,13 +494,21 @@ Post
     padding-top: var(--verticalRhythm);
 }
 
-.post-hero{
+.post img {
+    filter: grayscale(100%);
+
+    /*center align body */
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.post-hero {
     width: 100%;
 }
 
-.post img {
-    max-width: 100%;
-    filter: grayscale(100%);
+.post img.--color {
+    filter: none;
 }
 
 .post-date {
