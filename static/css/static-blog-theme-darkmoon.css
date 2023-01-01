@@ -245,9 +245,8 @@ Header
 
 .header-searchResults {
     color: var(--color-white);
-    background-color: var(--color-mercury);
+    background-color: var(--color-mineshaftVariation);
     padding: var(--margin);
-    padding-top: 0;
     display: none;
 }
 
