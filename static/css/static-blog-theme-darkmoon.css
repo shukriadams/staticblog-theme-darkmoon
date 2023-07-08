@@ -92,6 +92,16 @@ code {
     border-radius: 2px;
 }
 
+/* horizontally center and width lock all iframes by default, we can't say for sure what iframes will contain but this seems
+like a sane start, and for now at least is known to help youtube embeds
+*/
+iframe {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 100%;
+}
+
 /*#############################################################################
 Archive
 #############################################################################*/
