@@ -6,6 +6,7 @@ BASE STYLE
 :root {
     --color-white: #fcfcfc;
     --color-meteor: #C47211;
+    --color-lavender: #C678DD;
     --color-silver: #bababa;
     --color-mercury: #e9e9e9;
     --color-mineshaft: #212121;
@@ -90,6 +91,11 @@ code {
     background-color: var(--color-mineshaftVariation);
     padding: 2px 12px;
     border-radius: 2px;
+}
+
+/* all code blocks in p tags are inline, add some color differentiation */
+p code {
+    color: var(--color-lavender);
 }
 
 /* horizontally center and width lock all iframes by default, we can't say for sure what iframes will contain but this seems
