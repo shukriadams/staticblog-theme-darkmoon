@@ -96,6 +96,8 @@ code {
 /* all code blocks in p tags are inline, add some color differentiation */
 p code {
     color: var(--color-lavender);
+    background-color: transparent;
+    padding: initial;    
 }
 
 /* horizontally center and width lock all iframes by default, we can't say for sure what iframes will contain but this seems
