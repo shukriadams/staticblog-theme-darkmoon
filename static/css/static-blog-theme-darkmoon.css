@@ -473,6 +473,7 @@ Layout
 }
 
 .layout-footer {
+    border-top: solid 2px var(--color-mineshaftVariation);
     color: var(--color-silver);
     height: var(--footerHeight);
     background-color: var(--color-black);
