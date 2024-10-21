@@ -408,6 +408,11 @@ Index
     position: relative;
 }
 
+.index-itemWeight--Top {
+    height: 386px;
+    max-height: 386px;
+}
+
 .index-itemHeader {
     color: var(--color-white);
     line-height: 30px;
@@ -421,10 +426,14 @@ Index
 .index-itemLinkContent {
     padding: 0 24px;
     position: absolute;
-    top: 0;
+    top: 50%;
     left: 0;
     right: 0;
-    bottom: 0;
+    transform: translateY(-50%);
+}
+
+.index-itemLinkContent h2 {
+    padding: 0;
 }
 
 .index-itemDate{
