@@ -14,12 +14,7 @@
             
             {{#if post.date}}
                 <div class="post-date">   
-                    {{shortDate post.date}} ({{ago post.date}})
-                    {{#if post.isUpdated}}
-                        <div>
-                            Updated {{shortDate post.updated}} ({{ago post.updated}})
-                        </div>
-                    {{/if}}
+                    Published {{shortDate post.date}} {{#if post.isUpdated}}(updated {{shortDate post.updated}}){{/if}}
                 </div>
             {{/if}}
 
